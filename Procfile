@@ -1,1 +1,1 @@
-web: node minimal\app.js
+web: node app.js
