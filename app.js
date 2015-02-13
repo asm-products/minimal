@@ -8,9 +8,37 @@ app.get('/', function(request, response) {
   response.send('Hello World!');
 });
 
+
+app.get("/api/bikes", function(req, res, next) {
+    res.send(bikes);
+});
+
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
 });
+
+var bikes = { 
+    mountain : [
+            "Epic",
+            "Camber",
+            "StumpJumper",
+            "RockHopper",
+            "Pitch"
+
+        ],
+        road : [
+            "Tarmac",
+            "Allex",
+            "Venge",
+            "Siv"
+        ],
+        womens_mountain : [
+            "Era",
+            "Fate",
+            "Jett",
+            "Rumor"
+        ]
+}
 
 /*var express = require('express');
 var path = require('path');
