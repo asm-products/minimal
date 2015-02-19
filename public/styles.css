@@ -58,7 +58,6 @@ input:focus {
   background: url(http://i.imgur.com/1brkzro.jpg) no-repeat 50% 0%;
   background-size:cover;
   background-attachment:fixed;
-  
 }
 #header .bottom {
   display:flex;
