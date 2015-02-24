@@ -1,5 +1,10 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
+var router = express.Router();
+
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
@@ -12,6 +17,60 @@ app.get('/', function(request, response) {
 app.get("/api/bikes", function(req, res, next) {
     res.send(bikes);
 });
+
+router.get('/mybike', function(req, res) {
+    res.json({message: bikes});
+});
+
+router.get('/mybike/frame/', function(req, res) {
+    res.json({
+        "frames" :
+        [
+        "urban",
+        "road",
+        "mountain"
+        ]
+    });
+});
+
+router.get('/mybike/frame/:bike_type', function(req, res) {
+    res.json({
+        "frames" :
+        [
+        "urban",
+        "road",
+        "mountain"
+        ]
+    });
+});
+
+router.get('/mybike/parts', function(req, res) {
+    res.json({
+        "part": "part",
+        "part": "part"
+    });
+});
+
+router.get('/mybike/rides/', function(req, res) {
+    res.json({
+      "id": "22",
+      "rider_id": 1,
+      "frame": "urban",
+      "ride_name": "wow"
+    });
+});
+
+router.get('/mybike/tech/', function(req, res) {
+    res.json({
+     "power_level": "Power Level",
+     "find_my_bike": "find_my_bike",
+     "bike_tamper": "tamper",
+     "bluetooth": "bluetooth"
+    });
+});
+app.use('/api', router);
+
+
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
@@ -36,9 +95,13 @@ var bikes = {
             "Era",
             "Fate",
             "Jett",
-            "Rumor"
+            "Rumor",
+            "happy",
+            "run",
+            "fast"
         ]
 }
+
 
 /*var express = require('express');
 var path = require('path');
