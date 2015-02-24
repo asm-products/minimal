@@ -18,11 +18,11 @@ app.get("/api/bikes", function(req, res, next) {
     res.send(bikes);
 });
 
-router.get('/my-bike', function(req, res) {
+router.get('/mybike', function(req, res) {
     res.json({message: bikes});
 });
 
-router.get('/my-bike/frame/', function(req, res) {
+router.get('/mybike/frame/', function(req, res) {
     res.json({
         "frames" :
         [
@@ -33,7 +33,7 @@ router.get('/my-bike/frame/', function(req, res) {
     });
 });
 
-router.get('/my-bike/frame/:bike_type', function(req, res) {
+router.get('/mybike/frame/:bike_type', function(req, res) {
     res.json({
         "frames" :
         [
@@ -44,14 +44,14 @@ router.get('/my-bike/frame/:bike_type', function(req, res) {
     });
 });
 
-router.get('/my-bike/parts', function(req, res) {
+router.get('/mybike/parts', function(req, res) {
     res.json({
         "part": "part",
         "part": "part"
     });
 });
 
-router.get('/my-bike/rides/', function(req, res) {
+router.get('/mybike/rides/', function(req, res) {
     res.json({
       "id": "22",
       "rider_id": 1,
@@ -60,7 +60,7 @@ router.get('/my-bike/rides/', function(req, res) {
     });
 });
 
-router.get('/my-bike/tech/', function(req, res) {
+router.get('/mybike/tech/', function(req, res) {
     res.json({
      "power_level": "Power Level",
      "find_my_bike": "find_my_bike",
