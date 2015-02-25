@@ -1,74 +1,32 @@
 var express = require('express');
 var app = express();
+var routes = require('./routes/routes.js');
 var bodyParser = require('body-parser');
-var router = express.Router();
+var mongoose = require('mongoose');
+var bike = require('./routes/bike');
 
-app.use(bodyParser.urlencoded({extended: true}));
+mongodb://<dbuser>:<dbpassword>@ds045511.mongolab.com:45511/heroku_app34150280
+
+var dbName = 'bikeDB';
+var devUrl = 'mongodb://localhost:27017/'
+var herokuURL = 'mongodb://minimal:minimal@ds045511.mongolab.com:45511/heroku_app34150280'
+var connectionString = herokuURL + dbName;
+
+mongoose.connect(connectionString);
+    
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use('/api', bike);
+
+module.exports = app;
 
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', function(request, response) {
-  response.send('Hello World!');
-});
 
 
-app.get("/api/bikes", function(req, res, next) {
-    res.send(bikes);
-});
-
-router.get('/mybike', function(req, res) {
-    res.json({message: bikes});
-});
-
-router.get('/mybike/frame/', function(req, res) {
-    res.json({
-        "frames" :
-        [
-        "urban",
-        "road",
-        "mountain"
-        ]
-    });
-});
-
-router.get('/mybike/frame/:bike_type', function(req, res) {
-    res.json({
-        "frames" :
-        [
-        "urban",
-        "road",
-        "mountain"
-        ]
-    });
-});
-
-router.get('/mybike/parts', function(req, res) {
-    res.json({
-        "part": "part",
-        "part": "part"
-    });
-});
-
-router.get('/mybike/rides/', function(req, res) {
-    res.json({
-      "id": "22",
-      "rider_id": 1,
-      "frame": "urban",
-      "ride_name": "wow"
-    });
-});
-
-router.get('/mybike/tech/', function(req, res) {
-    res.json({
-     "power_level": "Power Level",
-     "find_my_bike": "find_my_bike",
-     "bike_tamper": "tamper",
-     "bluetooth": "bluetooth"
-    });
-});
-app.use('/api', router);
+// app.use('/', routes);
+// app.use('/api', router);
 
 
 
@@ -76,31 +34,6 @@ app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
 });
 
-var bikes = { 
-    mountain : [
-            "Epic",
-            "Camber",
-            "StumpJumper",
-            "RockHopper",
-            "Pitch"
-
-        ],
-        road : [
-            "Tarmac",
-            "Allex",
-            "Venge",
-            "Siv"
-        ],
-        womens_mountain : [
-            "Era",
-            "Fate",
-            "Jett",
-            "Rumor",
-            "happy",
-            "run",
-            "fast"
-        ]
-}
 
 
 /*var express = require('express');
