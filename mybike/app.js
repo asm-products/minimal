@@ -1,43 +1,12 @@
 var express = require('express');
-var app = express();
-var routes = require('./routes/routes.js');
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var bike = require('./routes/bike');
-
-//var dbName = 'bikeDB';
-//var devUrl = 'mongodb://localhost:27017/'
-//var herokuURL = 'mongodb://minimal:minimal@ds045511.mongolab.com:45511/heroku_app34150280'
-//mongoose.connect(connectionString);
-
-var herokuURL = process.env.MONGOLAB_URI;
-mongoose.connect(herokuURL);
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use('/api', bike);
-
-module.exports = app;
-
-app.set('port', (process.env.PORT || 5000));
-app.use(express.static(__dirname + '/public'));
-
-
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'));
-});
-
-
-
-/*var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var home = require('./routes/home');
 var routes = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
 
@@ -53,8 +22,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-app.use('/users', users);
+app.get('/', function(req, res) {
+    console.log(app._router.stack);
+    res.render('api', {routes: app._router.stack });
+});
+app.use('/api/', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -89,4 +61,3 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
-*/
