@@ -12,63 +12,6 @@ var devUrl = 'mongodb://localhost:27017/'
 var herokuURL = 'mongodb://minimal:minimal@ds045511.mongolab.com:45511/heroku_app34150280'
 var connectionString = herokuURL + dbName;
 
-<<<<<<< HEAD
-app.get("/api/bikes", function(req, res, next) {
-    res.send(bikes);
-});
-
-router.get('/mybike', function(req, res) {
-    res.json({message: bikes});
-});
-
-router.get('/mybike/frame/', function(req, res) {
-    res.json({
-        "frames" :
-        [
-        "urban",
-        "road",
-        "mountain"
-        ]
-    });
-});
-
-router.get('/mybike/frame/:bike_type', function(req, res) {
-    res.json({
-        "frames" :
-        [
-        "urban",
-        "road",
-        "mountain"
-        ]
-    });
-});
-
-router.get('/mybike/parts', function(req, res) {
-    res.json({
-        "part": "part",
-        "part": "part"
-    });
-});
-
-router.get('/mybike/rides/', function(req, res) {
-    res.json({
-      "id": "22",
-      "rider_id": 1,
-      "frame": "urban",
-      "ride_name": "wow"
-    });
-});
-
-router.get('/mybike/tech/', function(req, res) {
-    res.json({
-     "power_level": "Power Level",
-     "find_my_bike": "find_my_bike",
-     "bike_tamper": "tamper",
-     "bluetooth": "bluetooth"
-    });
-});
-app.use('/api', router);
-=======
 mongoose.connect(connectionString);
     
 app.use(bodyParser.json());
@@ -84,7 +27,6 @@ app.use(express.static(__dirname + '/public'));
 
 // app.use('/', routes);
 // app.use('/api', router);
->>>>>>> added bike model, routes and crud
 
 
 
