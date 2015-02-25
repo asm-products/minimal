@@ -5,15 +5,14 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var bike = require('./routes/bike');
 
-mongodb://<dbuser>:<dbpassword>@ds045511.mongolab.com:45511/heroku_app34150280
+//var dbName = 'bikeDB';
+//var devUrl = 'mongodb://localhost:27017/'
+//var herokuURL = 'mongodb://minimal:minimal@ds045511.mongolab.com:45511/heroku_app34150280'
+//mongoose.connect(connectionString);
 
-var dbName = 'bikeDB';
-var devUrl = 'mongodb://localhost:27017/'
-var herokuURL = 'mongodb://minimal:minimal@ds045511.mongolab.com:45511/heroku_app34150280'
-var connectionString = herokuURL + dbName;
+var herokuURL = process.env.MONGOLAB_URI;
+mongoose.connect(herokuURL);
 
-mongoose.connect(connectionString);
-    
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/api', bike);
