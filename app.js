@@ -1,19 +1,18 @@
 var express = require('express');
 var app = express();
+var routes = require('./routes/routes.js');
 var bodyParser = require('body-parser');
-var router = express.Router();
+var mongoose = require('mongoose');
+var bike = require('./routes/bike');
 
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
+mongodb://<dbuser>:<dbpassword>@ds045511.mongolab.com:45511/heroku_app34150280
 
-app.set('port', (process.env.PORT || 5000));
-app.use(express.static(__dirname + '/public'));
+var dbName = 'bikeDB';
+var devUrl = 'mongodb://localhost:27017/'
+var herokuURL = 'mongodb://minimal:minimal@ds045511.mongolab.com:45511/heroku_app34150280'
+var connectionString = devUrl + dbName;
 
-app.get('/', function(request, response) {
-  response.send('Hello World!');
-});
-
-
+<<<<<<< HEAD
 app.get("/api/bikes", function(req, res, next) {
     res.send(bikes);
 });
@@ -69,6 +68,23 @@ router.get('/mybike/tech/', function(req, res) {
     });
 });
 app.use('/api', router);
+=======
+mongoose.connect(connectionString);
+    
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use('/api', bike);
+
+module.exports = app;
+
+app.set('port', (process.env.PORT || 5000));
+app.use(express.static(__dirname + '/public'));
+
+
+
+// app.use('/', routes);
+// app.use('/api', router);
+>>>>>>> added bike model, routes and crud
 
 
 
@@ -76,31 +92,6 @@ app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
 });
 
-var bikes = { 
-    mountain : [
-            "Epic",
-            "Camber",
-            "StumpJumper",
-            "RockHopper",
-            "Pitch"
-
-        ],
-        road : [
-            "Tarmac",
-            "Allex",
-            "Venge",
-            "Siv"
-        ],
-        womens_mountain : [
-            "Era",
-            "Fate",
-            "Jett",
-            "Rumor",
-            "happy",
-            "run",
-            "fast"
-        ]
-}
 
 
 /*var express = require('express');
