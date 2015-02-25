@@ -9,11 +9,11 @@ module.exports = function Mailer() {
 
     var SendMail = function(to, from, message) {
 
-    }
+    };
 
     return {
         SignupEmail: function() {
-            console.log("Signup mail");
+            console.log("Signup mail log");
         }
     }
 }
