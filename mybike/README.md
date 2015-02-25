@@ -6,7 +6,7 @@ My Bike
 <br />
 ####I - Install required packages
 <br />
-    
+
 ```npm install
 ```
 
