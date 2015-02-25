@@ -10,7 +10,7 @@ mongodb://<dbuser>:<dbpassword>@ds045511.mongolab.com:45511/heroku_app34150280
 var dbName = 'bikeDB';
 var devUrl = 'mongodb://localhost:27017/'
 var herokuURL = 'mongodb://minimal:minimal@ds045511.mongolab.com:45511/heroku_app34150280'
-var connectionString = devUrl + dbName;
+var connectionString = herokuURL + dbName;
 
 <<<<<<< HEAD
 app.get("/api/bikes", function(req, res, next) {
