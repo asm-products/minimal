@@ -2,3 +2,7 @@ node_modules
 ui\node_modules
 *.log
 .idea
+bower_components
+temp
+.sass-cache
+bin

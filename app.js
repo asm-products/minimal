@@ -10,6 +10,74 @@ var bike = require('./routes/bike');
 //var herokuURL = 'mongodb://minimal:minimal@ds045511.mongolab.com:45511/heroku_app34150280'
 //mongoose.connect(connectionString);
 
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+app.set('view engine', 'jade');
+app.set('port', (process.env.PORT || 4000));
+app.use(express.static(__dirname + '/public'));
+
+
+
+/////////////////////////////////////////
+// client page routes
+app.get('/', function(request, response) {
+  response.render('index', { title: 'Minimal :: Crowdsourced Bike Building' });
+});
+
+app.get('/store', function(request, response) {
+  response.render('store', { title: 'Minimal :: Crowdsourced Bike Building' });
+});
+
+app.get('/store/:id', function(request, response) {
+  response.render('store', { title: 'Minimal :: Crowdsourced Bike Building' });
+});
+
+app.get('/bikes', function(request, response) {
+  response.render('bikes', { title: 'Minimal :: Crowdsourced Bike Building' });
+});
+
+app.get('/community', function(request, response) {
+  response.render('community', { title: 'Minimal :: Crowdsourced Bike Building' });
+});
+
+app.get('/build', function(request, response) {
+  response.render('build', { title: 'Minimal :: Crowdsourced Bike Building' });
+});
+
+app.get('/cart', function(request, response) {
+  response.render('cart', { title: 'Minimal :: Crowdsourced Bike Building' });
+});
+
+app.get('/about', function(request, response) {
+  response.render('about', { title: 'Minimal :: Crowdsourced Bike Building' });
+});
+/////////////////////////////////////////
+
+
+
+/////////////////////////////////////////
+// api routes
+app.get("/api/bikes", function(req, res, next) {
+    res.send(bikes);
+});
+
+router.get('/mybike', function(req, res) {
+    res.json({message: bikes});
+});
+
+router.get('/mybike/frame/', function(req, res) {
+    res.json({
+        "frames" :
+        [
+        "urban",
+        "road",
+        "mountain"
+        ]
+    });
+});
+
+
 var herokuURL = process.env.MONGOLAB_URI;
 mongoose.connect(herokuURL);
 
@@ -22,6 +90,16 @@ module.exports = app;
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
+router.get('/mybike/tech/', function(req, res) {
+    res.json({
+     "power_level": "Power Level",
+     "find_my_bike": "find_my_bike",
+     "bike_tamper": "tamper",
+     "bluetooth": "bluetooth"
+    });
+});
+app.use('/api', router);
+/////////////////////////////////////////
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
