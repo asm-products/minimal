@@ -4,6 +4,7 @@ var routes = require('./routes/routes.js');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var bike = require('./routes/bike');
+var router = express.Router();
 
 //var dbName = 'bikeDB';
 //var devUrl = 'mongodb://localhost:27017/'
