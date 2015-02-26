@@ -6,14 +6,51 @@ var router = express.Router();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.set('port', (process.env.PORT || 5000));
+app.set('view engine', 'jade');
+app.set('port', (process.env.PORT || 4000));
 app.use(express.static(__dirname + '/public'));
 
+
+
+/////////////////////////////////////////
+// client page routes
 app.get('/', function(request, response) {
-  response.send('Hello World!');
+  response.render('index', { title: 'Minimal :: Crowdsourced Bike Building' });
 });
 
+app.get('/store', function(request, response) {
+  response.render('store', { title: 'Minimal :: Crowdsourced Bike Building' });
+});
 
+app.get('/store/:id', function(request, response) {
+  response.render('store', { title: 'Minimal :: Crowdsourced Bike Building' });
+});
+
+app.get('/bikes', function(request, response) {
+  response.render('bikes', { title: 'Minimal :: Crowdsourced Bike Building' });
+});
+
+app.get('/community', function(request, response) {
+  response.render('community', { title: 'Minimal :: Crowdsourced Bike Building' });
+});
+
+app.get('/build', function(request, response) {
+  response.render('build', { title: 'Minimal :: Crowdsourced Bike Building' });
+});
+
+app.get('/cart', function(request, response) {
+  response.render('cart', { title: 'Minimal :: Crowdsourced Bike Building' });
+});
+
+app.get('/about', function(request, response) {
+  response.render('about', { title: 'Minimal :: Crowdsourced Bike Building' });
+});
+/////////////////////////////////////////
+
+
+
+/////////////////////////////////////////
+// api routes
 app.get("/api/bikes", function(req, res, next) {
     res.send(bikes);
 });
@@ -69,7 +106,7 @@ router.get('/mybike/tech/', function(req, res) {
     });
 });
 app.use('/api', router);
-
+/////////////////////////////////////////
 
 
 app.listen(app.get('port'), function() {
