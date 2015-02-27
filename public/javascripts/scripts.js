@@ -1,10 +1,18 @@
 $( document ).ready(function() {
-	$("#btn_store").click(function(e){
-		e.preventDefault();
-		console.log("store button clicked...");
-		$("div#storemenu").toggle();
-	});
+	// show hide store menu
+	$("#btn_store")
+		.mouseenter(function(e){
+			$("div#storemenu").show();
+		})
+		.click(function(e){
+			$("div#storemenu").toggle();
+		});
+	// $("div#storemenu")
+	// 	.mouseleave(function(e){
+	// 		$("div#storemenu").hide();
+	// 	});
 
+	// menu hover
 	$("div#storemenu table tr td a img")
 		.mouseenter(function(e){
 			// console.log("mouseenter: ", this);
@@ -18,4 +26,5 @@ $( document ).ready(function() {
 				return attr.replace("on", "off");
 			});
 		});
+
 });

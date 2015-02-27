@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="274" height="22" viewBox="0 0 137 11">
+  <defs>
+    <style>
+
+      .cls-2 {
+        font-size: 14px;
+      }
+
+      .cls-3 {
+        fill: #666666;
+        text-anchor: middle;
+        font-size: 14px;
+        font-family: "Montserrat";
+      }
+    </style>
+  </defs>
+  <text class="cls-2" x="68px" y="11px"><tspan x="50%" class="cls-3">BRAKE LEVERS</tspan></text>
+</svg>

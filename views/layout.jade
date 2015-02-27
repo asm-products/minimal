@@ -16,13 +16,14 @@ html
     script(src='/javascripts/bootstrap.min.js')
     script(src='/javascripts/scripts.js')
   body
-    include header
+    .container-fluid#wrapper
+        include header
 
-    .container-fluid#main
-      block content
+        .container-fluid#main
+          block content
 
-    include stayinloop
+        include stayinloop
 
-    include footer
+        include footer
 
-    include storemenu
+        include storemenu

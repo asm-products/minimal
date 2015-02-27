@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="100" height="22" viewBox="0 0 50 11">
+  <defs>
+    <style>
+
+      .cls-2 {
+        filter: url(#color-overlay-1);
+        font-size: 14px;
+      }
+
+      .cls-3 {
+        fill: #666666;
+        text-anchor: middle;
+        font-size: 14px;
+        font-family: "Montserrat";
+      }
+    </style>
+
+    <filter id="color-overlay-1" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#ffffff" flood-opacity="1"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend mode="normal" in2="SourceGraphic" result="colorOverlay"/>
+    </filter>
+  </defs>
+  <text class="cls-2" x="25px" y="11px"><tspan x="50%" class="cls-3">COGS</tspan></text>
+</svg>
