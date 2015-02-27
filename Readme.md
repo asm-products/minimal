@@ -2,6 +2,7 @@
 
 * Anyone can fork and send a Pull Request (It's the only way we support)
 * Run the app locally before committing.
+* Please ensure that you have synced with the upstream minimal branch. This ensures that merges go smoothly.
 
 ##Getting Started
 
