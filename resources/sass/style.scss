@@ -4,8 +4,62 @@
 html, body {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
+	letter-spacing: 2px;
+	margin: auto 0;
 }
 
+// TODO: commented out for now
+// div#storemenu {
+// 	div {
+// 		height: 200px;
+// 		width: 200px;
+// 	}
+
+// 	.category {
+// 		width: 100%;
+// 		height: 100%;
+// 	}
+// }
+
+// div#storemenu div {
+// max-width: 300px;
+// max-height: 300px;
+// /* padding: 40px; */
+// /* margin: 13px; */
+// /* vertical-align: middle; */
+// text-align: center;
+// /* margin-top: 35px; */
+// border: rgb(111, 111, 111);
+// border-width: 0.5px;
+// border-style: solid transparent;
+// border: 1px solid #333;
+// /* transform: scale(0.5); */
+// border-left: none;
+// width: auto;
+// height: auto;
+// display: grid;
+// }
+
+// div#storemenu {
+// display: none;
+// position: absolute;
+// background-color: #222;
+// max-width: 1200px;
+// top: 161px;
+// /* left: 104px; */
+// margin: auto 0;
+// }
+
+
+// ## WRAPPER ##
+div#wrapper {
+	max-width: 1110px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: auto;
+}
 
 
 // ## HEADER ##
@@ -14,9 +68,10 @@ div#upper-nav {
 	margin-bottom: 20px;
 	
 	a {
-		font-family: 'Playfair+Display', sans-serif;
+		font-family: 'Playfair Display', sans-serif;
 		font-weight: 400;
 		font-style: italic;
+		letter-spacing: 1px;
 		color: #000;
 	}
 }
@@ -106,7 +161,16 @@ button#submit {
 // ## FOOTER ##
 div#footer {
 	background-color: #222;
-	height: 210px;
+	min-height: 210px;
+
+	div a {
+		color: #777;
+		font-size: 9pt;
+	}
+
+	div a.social {
+		padding-left:35px;
+	}
 }
 
 
@@ -117,8 +181,8 @@ div#storemenu {
 	display: none;
 	position: absolute;
 	background-color: #222;
-	height: 1790px;
-	width: 1200px;
+	max-width: 1110px;
+	min-height: 693px;
 	top: 161px;
 }
 

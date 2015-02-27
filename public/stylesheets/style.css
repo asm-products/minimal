@@ -2,15 +2,26 @@
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,300);
 html, body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin: auto 0; }
+
+div#wrapper {
+  max-width: 1110px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: auto; }
 
 div#upper-nav {
   margin-top: 20px;
   margin-bottom: 20px; }
   div#upper-nav a {
-    font-family: 'Playfair+Display', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-weight: 400;
     font-style: italic;
+    letter-spacing: 1px;
     color: #000; }
 
 div#lower-nav {
@@ -73,14 +84,19 @@ button#submit {
 
 div#footer {
   background-color: #222;
-  height: 210px; }
+  min-height: 210px; }
+  div#footer div a {
+    color: #777;
+    font-size: 9pt; }
+  div#footer div a.social {
+    padding-left: 35px; }
 
 div#storemenu {
   display: none;
   position: absolute;
   background-color: #222;
-  height: 1790px;
-  width: 1200px;
+  max-width: 1110px;
+  min-height: 693px;
   top: 161px; }
 
 .vcenter {

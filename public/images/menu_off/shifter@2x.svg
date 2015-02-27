@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="184" height="28" viewBox="0 0 92 14">
+  <defs>
+    <style>
+
+      .cls-2 {
+        font-size: 17px;
+      }
+
+      .cls-3 {
+        fill: #666666;
+        text-anchor: middle;
+        font-size: 17px;
+        font-family: "Montserrat";
+      }
+    </style>
+  </defs>
+  <text class="cls-2" x="46px" y="13px"><tspan x="50%" class="cls-3">SHIFTER</tspan></text>
+</svg>
