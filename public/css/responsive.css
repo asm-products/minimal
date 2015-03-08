@@ -1,0 +1,79 @@
+@media (min-width: 1200px){
+	.container {
+		width: 1120px;
+	}
+
+	#navbar ul.nav {
+		width: 582px;
+		padding-left: 70px;
+	}
+}
+
+@media (min-width: 768px){
+	.navbar .navbar-brand {
+		width: 175px;
+		height: 46px;
+		margin: 0 auto;
+		float: none;
+		background-color: #FFF;
+		position: absolute;
+		left: 50%;
+		text-align: center;
+		top: 46px;
+		margin-left: -87px !important;
+		color: #000;
+		padding: 0;
+	}
+
+	.navbar .navbar-brand:hover {
+		background-color: #FFF;
+	}
+}
+
+@media (max-width: 768px){
+	.navbar .navbar-brand{
+		width: 100%;
+		text-align: center;
+	}
+
+	.navbar .navbar-brand img{
+		display: inline;
+	}
+
+	.footer .nav>li>a {
+		text-align: center;
+	}
+	.footer .nav {
+		margin-bottom: 20px;
+	}
+	.footer .nav-pills{
+		display: inline-block;
+		text-align: center;
+	}
+
+	#newsletterSignup{
+		width: 100%;
+	}
+
+	#newsletterSignup .input-group{
+		width: 100%;
+	}
+
+	#newsletterSignup .form-control,
+	#newsletterSignup .input-group-btn,
+	#newsletterSignup .input-group-btn .btn{
+		clear: both;
+		display: block;
+		width: 100% !important;
+	}
+
+	#newsletterSignup .input-group-btn{
+		float: left;
+		margin-top: 10px;
+	}
+
+	.footer .nav-justified>li{
+		display: inline-block;
+		padding: 10px 20px;
+	}
+}

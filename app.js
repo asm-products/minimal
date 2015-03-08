@@ -17,8 +17,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.set('view engine', 'jade');
+//app.set('view engine', 'jade');
 
+/*
 // array of menu items
 // these relate directly to the menu icon file names
 // TODO: feed this with http.get call
@@ -48,6 +49,7 @@ var menu_items = [
   {_id: 12345, name: "stems"},
   {_id: 12345, name: "tires"}
 ]
+*/
 
 // pass in menu_items array so entire app has access
 // to it
@@ -56,6 +58,7 @@ app.use(function(req, res, next) {
   next();
 });
 
+/*
 /////////////////////////////////////////
 // client page routes
 app.get('/', function(request, response) {
@@ -90,7 +93,7 @@ app.get('/about', function(request, response) {
   response.render('about', { title: 'Minimal :: Crowdsourced Bike Building' });
 });
 /////////////////////////////////////////
-
+*/
 app.listen(app.get('port'), function() {
     console.log("Node app is running at localhost:" + app.get('port'));
 });
