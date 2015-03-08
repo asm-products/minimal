@@ -1,0 +1,286 @@
+body {
+	background-color: #BFD8D5;
+	font: normal 14px Montserrat, sans-serif;
+	color: #181818;
+}
+
+.title{
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.input-group .form-control , .form-control {
+	border-radius: 0;
+	border: none;
+	box-shadow: none;
+	height: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.input-group .btn, .btn {
+	height: 40px;
+	border-radius: 0;
+	background-color: #222;
+	border: none;
+	color: #FFF;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 600;
+	padding: 0 80px;
+	margin: 0;
+	z-index: 2;
+}
+
+.h4, h4 {
+	font-size: 17px;
+}
+
+.h4, .h5, .h6, h4, h5, h6 {
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+/* Navbar */
+
+.navbar-default {
+	background-color: #fff;
+	border: none;
+	border-radius: 0;
+	padding: 42px 0 28px 0;
+}
+
+.navbar .navbar-brand {
+	text-transform: uppercase;
+	/*font: normal 28px "Jaapokki subtract";*/
+	font-weight: lighter;
+}
+
+.navbar-default .navbar-top li {
+	list-style: none;
+	width: 150px;
+	text-align: center;
+	font: italic normal 16px "Playfair Display", Times, Serif;
+}
+
+.navbar-default .navbar-top li a{
+	color: #181818;
+}
+
+.navbar-top .line {
+	width: 100%;
+	border-bottom: solid 1px #DDD;
+	height: 1px;
+	display: block;
+	margin: 8px 0 10px;
+}
+
+#navbar {
+	margin-top: 12px;
+	margin-bottom: 10px;
+}
+
+#navbar li {
+	float: none;
+	display: inline;
+	position: relative;
+}
+
+#navbar li a {
+	display: inline;
+	text-transform: uppercase;
+	color: #181818;
+	font: 100 12px Montserrat, sans-serif;
+	padding-bottom: 22px;
+	letter-spacing: 1px;
+}
+
+#navbar li.spacer {
+	display: inline-block;
+	width: 135px;
+}
+
+#navbar ul.nav {
+	float: none;
+	margin: 0 auto;
+}
+
+#navbar.navbar-collapse.in li {
+	display: block;
+	width: 100%;
+	float: left;
+	height: 48px;
+	line-height: 48px;
+}
+
+#navbar.navbar-collapse.in li a{
+	display: block;
+}
+
+#navbar.navbar-collapse.in li.spacer {
+	display: none;
+}
+
+#navbar.navbar-collapse.in ul.nav {
+	margin-top: 20px;
+}
+
+#navbar .store-menu{
+	position: inherit;
+}
+
+#navbar .store-menu:hover #store-dropdown{
+	margin-top: 0;
+	opacity: 1;
+	height: auto;
+	visibility: visible;
+	transition: all .3s ease-in-out;
+}
+
+#navbar #store-dropdown li:hover{
+	background-color: #181818;
+}
+
+#navbar .store-menu:hover a.parent {
+	background-position: center top;
+	transition: all 0.25s;
+}
+
+#navbar .store-menu:hover a.parent {
+	background-image: url(../images/menu-down.png);
+	background-repeat: no-repeat;
+	z-index: 99999;
+	position: relative;
+	background-position: center bottom;
+	padding-bottom: 47px;
+	transition: all 0.25s;
+	transition-delay: 0.5s;
+	-webkit-transition-delay: 0.5s;
+	-moz-transition-delay: 0.5s;
+}
+
+#store-dropdown {
+	visibility: hidden;
+	position: absolute;
+	height: 800px;
+	overflow: hidden;
+	left: 0;
+	opacity: 0;
+	margin: 0;
+	padding: 0;
+	background-color: #222;
+	width: 100%;
+	z-index: 99;
+	top: 150px;
+	margin-top: 100px;
+	transition: all .3s ease-in-out;
+}
+
+#navbar #store-dropdown li{
+	float: left;
+	text-align: center;
+	border: solid 1px #363636;
+	height: 320px;
+	overflow: hidden;
+}
+
+#navbar .store-menu:hover #store-dropdown a{
+	top: 0;
+	opacity: 1;
+	transition: all .4s ease-in-out;
+}
+
+#navbar #store-dropdown a{
+	color: #666;
+	display: block;
+	padding: 80px 0;
+	text-align: center;
+	font-size: 15px;
+	text-decoration: none;
+	opacity: 0;
+	top: -100px;
+	position: relative;
+	transition: all .4s ease-in-out;
+}
+
+#navbar #store-dropdown a:hover,
+#navbar #store-dropdown a:hover i{
+	color: #FFF;
+	text-decoration: none;
+	transition: all .2s ease-in-out;
+}
+
+#navbar #store-dropdown a i {
+	font-size: 100px;
+	color: #666;
+	transition: all .2s ease-in-out;
+	margin-bottom: 20px;
+	display: block;
+}
+
+/* CONTENT */
+
+.container.content-wrapper {
+	min-height: 560px;
+}
+
+ /* FOOTER */
+
+.footer{
+	background-color: #222222;
+}
+
+.footer .newsletter {
+	padding: 60px 0;
+	background-color: #F7F7F9;
+}
+
+#newsletterSignup {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.footer .description {
+	margin: 25px 0;
+	font: normal 16px Playfair Display;
+	line-height: 1.4;
+	color: #777;
+}
+
+.footer .foot {
+	padding: 60px 0;
+}
+
+.footer .nav{
+	margin: 10px 0;
+}
+
+.footer .nav>li>a {
+	padding: 5px 0;
+	color: #888;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+
+.footer .nav>li>a:hover,
+.footer .nav>li>a:focus,
+.footer .nav>li>a:active {
+	color: #FFF;
+	background-color: transparent;
+}
+
+.footer ul.nav.nav-pills {
+	margin-top: 30px;
+}
+
+.footer .logo{
+	margin-top: 18px;
+}
+
+.navbar-top .short-links{
+	margin-bottom: 5px;
+}

@@ -8,7 +8,7 @@
 
 1. Fork git repo @ https://github.com/asm-products/minimal
 
-2. Sync to master
+2. Set repo to sync to upstream
 
 3. Run "npm install" to download all libs
 
@@ -16,3 +16,7 @@
     * Your local environment: "nf start --env config\.env_yourname"
     * Using Staging environment vars: "nf start --env config\.env_staging"
 
+##Github
+
+* [Merging an upstream repository into your fork](https://help.github.com/articles/merging-an-upstream-repository-into-your-fork/)
+* [Syncing a fork](https://help.github.com/articles/syncing-a-fork/)

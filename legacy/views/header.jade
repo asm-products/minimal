@@ -1,0 +1,16 @@
+.container-fluid
+	.row#upper-nav
+		.col-xs-6
+			a(id='btn_about',href='/about') About
+		.col-xs-6(style='text-align:right;')
+			a(id='btn_cart',href='/cart') Cart(0)
+	.row.text-center#lower-nav
+		nav.navbar.navbar-default
+			.container-fluid(style='background: url(/images/line.png);background-repeat: repeat-x;')
+				.navbar-header
+					a.btn(id='btn_store', href='#') STORE
+					a.btn(id='btn_bikes', href='/bikes') BIKES
+					a.navbar-brand(href='#')
+						img(alt='Brand', src='/images/header_logo.png')
+					a.btn(id='btn_community', href='/community') COMMUNITY
+					a.btn(id='btn_build', href='/build') BUILD

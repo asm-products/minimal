@@ -1,0 +1,5 @@
+.row#storemenu
+  each menu_item in menu_items
+    .col-xs-1
+      a(href='/store/#{menu_item._id}')
+        object.category(data='/images/menu_off/_#{menu_item.name}@2x.svg')
