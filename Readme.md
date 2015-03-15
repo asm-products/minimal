@@ -13,8 +13,8 @@
 3. Run "npm install" to download all libs
 
 4. Couple of ways to run the app:
-    * Your local environment: "nf start --env config\.env_yourname"
-    * Using Staging environment vars: "nf start --env config\.env_staging"
+    * Your local environment: "nf start --env config\\.env_yourname"
+    * Using Staging environment vars: "nf start --env config\\.env_staging"
 
 ##Github
 
