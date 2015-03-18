@@ -47,7 +47,8 @@ This returns an object with access token like so:
   "expires_in": 3600,
   "refresh_token": "REFRESH_TOKEN",
   "token_type": Bearer
-  }```
+  }
+```
 
   **Step II: Using the access token for Requests**
 
