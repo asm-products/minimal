@@ -36,8 +36,9 @@ Run: `gulp`
 
 **Step I: Creating Access Tokens**
 
-`http POST http://localhost:3000/api/oauth/token grant_type=password client_id=ios client_secret=RandomSecretWithLettersAndNumb3rs username=minimal password=abc1234
-`
+```
+http POST http://localhost:3000/api/oauth/token grant_type=password client_id=ios client_secret=RandomSecretWithLettersAndNumb3rs username=minimal password=abc1234
+```
 
 This returns an object with access token like so:
 
