@@ -31,7 +31,7 @@ Install packages: `npm install`
 
 Run: `gulp`
 
-## Using the API
+## Step II: Using the API
 
 
 **Step I: Creating Access Tokens**
