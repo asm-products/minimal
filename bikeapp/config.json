@@ -1,0 +1,26 @@
+{
+    "port": 3000,
+    "security": {
+        "tokenLife" : 3600
+    },
+    "mongoose": {
+        "uri": {
+            "development": "mongodb://localhost/minimal",
+            "production": "<PRODUCTION_URI_GOES_HERE>"
+        }
+    },
+    "default": {
+        "api": {
+            "version" : "v1"
+        },
+        "user": {
+            "username": "minimal",
+            "password": "abc1234"
+        },
+        "client": {
+            "name": "iOS App",
+            "clientId": "ios",
+            "clientSecret": "RandomSecretWithLettersAndNumb3rs"
+        }
+    }
+}

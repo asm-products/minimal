@@ -1,8 +1,11 @@
 var express = require('express');
+var passport = require('passport');
 var router = express.Router();
 
+router.all('/mybike/*', passport.authenticate('bearer', { session: false }));
+
 //GET - MyBike - /mybike
-router.get('/mybike', function(req, res) {
+router.get('/mybike', passport.authenticate('bearer', { session: false }), function(req, res) {
     res.json({
         "data":
             {
